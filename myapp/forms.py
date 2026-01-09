@@ -4,7 +4,7 @@ from .models import Products
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Products
-        fields = '__all__'
+        fields = ['name', 'price', 'description']
         labels = {
             'product_id': 'Product ID',
             'name': 'Name',
@@ -18,8 +18,8 @@ class ProductForm(forms.ModelForm):
             'product_id': forms.NumberInput(attrs={'placeholder': 'e.g 1','class': 'form-control'}),
             'name': forms.TextInput(attrs={'placeholder': 'e.g Widget','class': 'form-control'}),
             'sku': forms.TextInput(attrs={'placeholder': 'e.g WGT-001','class': 'form-control'}),
-            'price': forms.FloatField(attrs={'placeholder': 'e.g 19.99','  class': 'form-control'}),
-            'quantity': forms.IntegerField(attrs={'placeholder': 'e.g 100','class': 'form-control'}),
+            'price': forms.NumberInput(attrs={'placeholder': 'e.g 19.99','  class': 'form-control'}),
+            'quantity': forms.NumberInput(attrs={'placeholder': 'e.g 100','class': 'form-control'}),
             'supplier': forms.TextInput(attrs={'placeholder': 'e.g Acme Corp','class': 'form-control'}),
             'description': forms.Textarea(attrs={'placeholder': 'Product description here','class': 'form-control', 'rows': 3}),
         }
