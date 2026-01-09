@@ -29,7 +29,7 @@ def product_delete_view(request, product_id):
     if request.method == 'POST':
         product.delete()
         return redirect(request, 'product_list.html')
-    return render(request, 'delete_product.html', {'product': product})
+    return render(request, 'product_confirm_delete.html', {'product': product})
 
 def home(request):
     return render(request, 'home.html')
