@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Products
 from .forms import ProductForm
 
-# Create your views here.
+
 def product_list_view(request):
     products = Products.objects.all()
     return render(request, 'InvApp/product_list.html', {'products': products})
