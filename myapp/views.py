@@ -1,3 +1,4 @@
+# myproject/myapp/views.py
 from django.shortcuts import render,redirect
 from .models import Products
 from .forms import ProductForm
